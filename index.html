@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: rgb(230, 226, 195);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .tabs {
+            display: flex;
+            flex-direction: row;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .tab-header {
+            flex: 1;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .tab-header:last-child {
+            border-right: none;
+        }
+        .tab-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .textalign{
+            color:darkred;;
+            text-align: center;
+        }
+        .textcolorheading{
+            color:darkred;
+        }
+    </style>
+</head>
+<body>
+    <div  class="textalign">
+        <h2>Section Designer App</h2>
+    </div>
+    
+    <div class="tabs" >
+        <div class="tab-header" onmousemove="showTab('Version')">Version</div>
+        <div class="tab-header" onmousemove="showTab('developer')">Developer</div>
+        <div class="tab-header" onmousemove="showTab('limitations')">Limitations</div>
+        <div class="tab-header" onmousemove="showTab('futureUpdates')">Future Updates</div>
+        
+    </div>
+    <div class="tab-content" id="Version">
+        <p><strong>Version:</strong> V1.0.0.1 </p>
+        <p> <strong>   Release Date:    </strong>  09-25-2023 </p>
+    </div>
+    <div class="tab-content" id="developer">
+        <p>Sujit Hegde</p>
+        <p><strong>Contact Info :</strong> <a href="mailto:shegde@walterpmoore.com">shegde@walterpmoore.com</a></p>
+    </div>
+    
+    <div class="tab-content" id="futureUpdates" >
+        <h2 class="textcolorheading">Future Updates</h2>
+        <hr>
+        <h3>Geometry </h3>
+        <ul>
+            <li>Assign chosen pier section to Pier Labels in Etabs</li>
+            <li>Pier export to Revit as Drafting Views</li>
+            <li>Import rebar along with the pier from AutoCAD</li>
+        </ul>
+        
+            <h3>materials and Quantity </h3>
+        <ul>
+            <li>Link material to air table data</li>
+            <li>Calculate quantities</li>
+        </ul>
+            <h3>Analysis and Design </h3>
+        </ul>
+        <ul>
+            <li>Shear reinf scheduling</li>
+            <li>Showing Key plan of floor for reference in the app</li>
+           
+        </ul>
+    </div>
+    <div class="tab-content" id="limitations">
+        <h2 class="textcolorheading">Limitations</h2>
+        <hr>
+        <ul>
+            <li>This App will not design shear walls. It will only help in scheduling, adding rebars and export the peirs to general pier section in etabs</li>
+        
+        </ul>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            var tabContents = document.querySelectorAll('.tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Show the selected tab content
+            var tabContentToShow = document.getElementById(tabId);
+            if (tabContentToShow) {
+                tabContentToShow.classList.add('active');
+            }
+        }
+
+        // Show the default tab content
+        showTab('Version');
+    </script>
+</body>
+</html>
