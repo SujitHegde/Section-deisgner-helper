@@ -14,6 +14,13 @@ class Usage(db.Model):
     user = db.Column(db.String(80), nullable=False)
     timestamp = db.Column(db.String(80), nullable=False)
 
+# Function to initialize the database
+def init_db():
+    with app.app_context():
+        db.create_all()
+        print("Database initialized.")
+
+
 # Route to handle incoming data
 @app.route('/track', methods=['POST'])
 def track_usage():
@@ -34,11 +41,6 @@ def track_usage():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-        dblist=Usage.query.all()
-        for item in dblist:
-            print(f"ID: {item.id}, Event: {item.event}, User: {item.user}, Timestamp: {item.timestamp}")
-            
+    init_db()
     app.run(debug=True)
     
