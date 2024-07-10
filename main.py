@@ -34,7 +34,9 @@ def track_usage():
         new_usage = Usage(event=event, user=user, timestamp=timestamp)
         db.session.add(new_usage)
         db.session.commit()
-
+        dblist = Usage.query.all()
+        for item in dblist:
+            print(f"ID: {item.id}, Event: {item.event}, User: {item.user}, Timestamp: {item.timestamp}")
         return jsonify({"status": "success"}), 200
     except Exception as e:
         print(f"Error: {e}")
