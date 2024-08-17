@@ -60,11 +60,11 @@
     </div>
     
     <div class="tabs" >
-        <div class="tab-header" onmousemove="showTab('What is New')">What's New</div>
-        <div class="tab-header" onmousemove="showTab('Version')">Version</div>
-        <div class="tab-header" onmousemove="showTab('developer')">Developer</div>
-        <div class="tab-header" onmousemove="showTab('limitations')">Limitations</div>
-        <div class="tab-header" onmousemove="showTab('futureUpdates')">Future Updates</div>
+        <div class="tab-header" onclick="showTab('What is New')">What's New</div>
+        <div class="tab-header" onclick="showTab('Version')">Version</div>
+        <div class="tab-header" onclick="showTab('Contributions')">Developer</div>
+        <div class="tab-header" onclick="showTab('limitations')">Limitations</div>
+        <div class="tab-header" onclick="showTab('futureUpdates')">Future Updates</div>
         
     </div>
     <div class="tab-content" id="What is New">
@@ -72,8 +72,11 @@
             <li>
                Confinement reinforcement scheduling.
             </li>
+            <li>
+                Inbuilt PMM Solver to check DCR.
+             </li>
            <li>
-                Bug fixes
+                Bug fixes.
            </li>
         </ul>
     </div>
@@ -81,45 +84,69 @@
         <p><strong>Version:</strong> V1.0.2.0 </p>
         <p> <strong>   Release Date:    </strong>  06-08-2024 </p>
     </div>
-    <div class="tab-content" id="developer">
+
+    <div class="tab-content" id="Contributions">
+        <!-- Developers Section -->
+    <div class="section">
+        <h2>Developers</h2>
         <ul>
             <li>
-                <p>Sujit Hegde</p>
-            <p><strong>Contact Info :</strong> <a href="mailto:shegde@walterpmoore.com">shegde@walterpmoore.com</a></p>
+                <p>Sujit Hegde <a href="mailto:shegde@walterpmoore.com">(shegde@walterpmoore.com)</a></p>
             </li>
-             <li>
-                <p>Tushar Sharma</p>
-            <p><strong>Contact Info :</strong> <a href="mailto:tsharma@walterpmoore.com">tsharma@walterpmoore.com</a></p>
+            <li>
+                <p>Tushar Sharma <a href="mailto:tsharma@walterpmoore.com">(tsharma@walterpmoore.com)</a></p>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Technical Support Section -->
+    <div class="section">
+        <h2>Technical Support</h2>
+        <ul>
+            <li>
+                <p>Nishant Modhiya <a href="mailto:nmodhiya@walterpmoore.com">(nmodhiya@walterpmoore.com)</a></p>
+            </li>
+            <li>
+                <p>Tejomay Bhosale <a href="mailto:tbhosale@walterpmoore.com">(tbhosale@walterpmoore.com)</a></p>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Testing Section -->
+    <div class="section">
+        <h2>Testing</h2>
+        <ul>
+           
+            <li>
+                <p>Vikram Sivakumar <a href="mailto:vsivakumar@walterpmoore.com">(vsivakumar@walterpmoore.com)</a></p>
+                
+            </li>
+            <li>
+                <p>Chaitra Devaraddi <a href="mailto:cdevaraddi@walterpmoore.com">(cdevaraddi@walterpmoore.com)</a></p>
+                
             </li>
         </ul>
+    </div>
         
     </div>
     
     <div class="tab-content" id="futureUpdates" >
         <h2 class="textcolorheading">Future Updates</h2>
         <hr>
-        <h3>Geometry </h3>
         <ul>
-            <li>Pier export to Revit as Drafting Views</li>
-            <li>Import rebar along with the pier from AutoCAD</li>
-            
-        </ul>
-            <h3>Quantities </h3>
-        <ul>
-            <li>Calculate quantities</li>
-        </ul>
-            <h3>Analysis and Design </h3>
-        </ul>
-        <ul>
-            <li>Reinforcement suggestion based on forces</li>
+            <li>Quantity calculations</li>
+            <li>Detailed drawings preperation</li>
+            <li>Optimized Reinforcement Recommendations</li>
         </ul>
     </div>
     <div class="tab-content" id="limitations">
         <h2 class="textcolorheading">Limitations</h2>
         <hr>
         <ul>
-            <li>Works with Orthogonal walls only</li>
-        
+            <li>Currently supports only orthogonal walls</li>
+            <li>Exporting pier definitions from large ETABS models can be time-consuming</li>
         </ul>
     </div>
 
