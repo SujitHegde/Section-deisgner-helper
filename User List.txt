@@ -5,7 +5,6 @@ AmolA
 NaveenK
 KartikM
 SaurabhT
-KarthickO
 MohammedA
 GauravK
 DakshT
@@ -17,7 +16,6 @@ ArunChandB
 VikramS
 AdithyaH
 ParthT
-SafiuddinH
 MohammedI
 OnkarK
 SandeepK
